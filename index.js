@@ -13,7 +13,7 @@ const borderWidth = str => {
   return result ? result[0] : result
 }
 
-module.exports = postcss.plugin('postcss-border-spread', opts => root => {
+module.exports = postcss.plugin('postcss-value-spread', opts => root => {
   root.walkDecls(/^border(-top|-right|-bottom|-left)?$/i, decl => {
     // console.log('decl: ', decl)
     var props = { width: '', style: '', color: '' }
