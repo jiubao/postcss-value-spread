@@ -28,4 +28,23 @@ module.exports = postcss.plugin('postcss-border-spread', opts => root => {
 
     decl.remove()
   })
+
+  root.walkDecls(/^margin|padding$/i, decl => {
+    var prop = decl.prop
+    var values = postcss.list.space(decl.value)
+    if (!values || values.length === 1) return
+
+    var top = bottom = values[0]
+    var right = left = values[1]
+
+    if (values.length >= 3) bottom = values[2]
+    if (values.length >= 4) left = values[3]
+
+    decl.cloneAfter({ prop: `${prop}-left`, value: left })
+    decl.cloneAfter({ prop: `${prop}-bottom`, value: bottom })
+    decl.cloneAfter({ prop: `${prop}-right`, value: right })
+    decl.cloneAfter({ prop: `${prop}-top`, value: top })
+
+    decl.remove()
+  })
 })
