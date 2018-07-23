@@ -1,6 +1,6 @@
 {
   "name": "postcss-value-spread",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "PostCSS plugin that spread style values.",
   "keywords": [
     "postcss",
