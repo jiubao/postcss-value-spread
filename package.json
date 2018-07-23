@@ -1,0 +1,44 @@
+{
+  "name": "postcss-value-spread",
+  "version": "0.0.1",
+  "description": "PostCSS plugin that spread style values.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "border",
+    "padding",
+    "margin",
+    "spread",
+    "weex"
+  ],
+  "author": "jiubao <xia.ldj@gmail.com>",
+  "license": "MIT",
+  "repository": "jiubao/postcss-value-spread",
+  "bugs": {
+    "url": "https://github.com/jiubao/postcss-value-spread/issues"
+  },
+  "homepage": "https://github.com/jiubao/postcss-value-spread",
+  "dependencies": {
+    "postcss": "^6.0.16",
+    "standard-version": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^22.4.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "release": "standard-version && git push --follow-tags && npm publish --access=public"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
