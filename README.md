@@ -55,3 +55,11 @@ postcss([ require('postcss-value-spread') ])
 ```
 
 See [PostCSS] docs for examples for your environment.
+
+## Todo
+
+* config border | padding | margin
+* support radius
+  - support partial radius for weex
+  - full support
+  - configurable
